@@ -34,20 +34,17 @@ body {
   box-shadow: none; /* Bỏ hiệu ứng bóng */
   width: 100%; /* Đảm bảo header phủ rộng toàn bộ */
 }
+
 .navbar .logo {
-  height: 50px; /* Điều chỉnh chiều cao của logo, tăng từ 50px lên 80px */
-  width: auto; /* Đảm bảo logo giữ nguyên tỷ lệ */
-  margin-right: 30px; /* Khoảng cách giữa logo và menu */
-}
-.navbar {
-  display: flex;
-  justify-content: flex-start; /* Căn menu về bên trái */
-  align-items: center;
+  height: 80px; /* Điều chỉnh chiều cao của logo */
+  width: auto; /* Giữ tỷ lệ logo */
+  margin-right: 30px;
 }
 
-.navbar h1 {
-  font-size: 2.5rem;
-  color: white;
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 nav ul {
@@ -68,35 +65,44 @@ nav ul li a:hover {
   color: #ff6600;
 }
 
-/* Đảm bảo phần text trong header nổi bật */
+/* Đảm bảo text nổi bật trên nền video */
 .transparent-header .navbar a,
 .transparent-header h1 {
   position: relative;
-  z-index: 15; /* Đảm bảo chữ luôn hiển thị trên nền video */
+  z-index: 15; /* Hiển thị trên nền video */
 }
 
 /* Hero Section */
 .hero {
   position: relative;
   text-align: center;
-  color: rgb(131, 111, 195);
-  padding: 150px 20px 100px; /* Đẩy nội dung xuống dưới header */
-  z-index: 1; /* Đảm bảo nội dung hiển thị trên video */
+  color: white;
+  padding: 150px 20px 100px;
+  z-index: 1;
+  overflow: hidden; /* Đảm bảo phần nội dung không tràn ra ngoài */
 }
 
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
+  animation: fade-in 2s ease-in-out; /* Hiệu ứng xuất hiện dần */
 }
 
 .hero-content h2 {
   font-size: 3.5rem;
   margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-50px); /* Bắt đầu từ phía trên */
+  animation: slide-down 1s ease-out forwards; /* Hiệu ứng trượt xuống */
 }
 
 .hero-content p {
   font-size: 1.4rem;
   margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slide-down 1s ease-out forwards;
+  animation-delay: 0.3s; /* Xuất hiện sau tiêu đề */
 }
 
 .hero-content button {
@@ -107,11 +113,48 @@ nav ul li a:hover {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1.1rem;
-  transition: background-color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px); /* Dịch xuống dưới ban đầu */
+  animation: fade-in-up 1s ease-out forwards;
+  animation-delay: 0.6s; /* Xuất hiện sau đoạn mô tả */
 }
 
 .hero-content button:hover {
   background-color: #ff4500;
+  transform: translateY(-5px); /* Nổi nhẹ khi hover */
+}
+
+/* Hiệu ứng xuất hiện chữ */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* Section About Us */
 .section {
