@@ -530,3 +530,92 @@ p {
     margin-bottom: 30px;
   }
 }
+/* Partners Section */
+#partners {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#partners h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2e3a59;
+  margin-bottom: 20px;
+}
+
+#partners p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Partners Section */
+#partners {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#partners h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2e3a59;
+  margin-bottom: 20px;
+}
+
+#partners p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Carousel Container */
+.partners-carousel {
+  display: flex;
+  gap: 40px;
+  overflow: hidden; /* Giấu các logo không nằm trong khung */
+  position: relative;
+  width: 100%;
+}
+
+.partner-logo {
+  flex: 0 0 auto; /* Giữ kích thước logo cố định */
+  width: 150px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%); /* Biến logo thành màu xám */
+  transition: filter 0.3s ease;
+}
+
+.partner-logo img:hover {
+  filter: grayscale(0); /* Đổi logo thành màu gốc khi hover */
+}
+
+/* Animation chạy vòng tròn */
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Bắt đầu từ vị trí ban đầu */
+  }
+  100% {
+    transform: translateX(
+      -100%
+    ); /* Di chuyển toàn bộ các logo ra khỏi màn hình */
+  }
+}
+
+.partners-carousel {
+  animation: slide 20s linear infinite; /* Chạy vòng tròn liên tục */
+}
+
+/* Nhân đôi logo để đảm bảo vòng tròn liên tục */
+.partners-carousel .partner-logo {
+  flex: 0 0 150px; /* Kích thước cố định cho logo */
+}
