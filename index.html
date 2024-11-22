@@ -11,6 +11,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+    <link
+      rel="icon"
+      href="Remove-bg.ai_1732121817365.ico"
+      type="src\Remove-bg.ai_1732121817365.ico"
+    />
   </head>
   <body>
     <!-- Header Section -->
@@ -45,7 +54,9 @@
           At SS IT Joint Stock Company, we empower businesses to thrive in the
           digital age with cutting-edge technology solutions.
         </p>
-        <button data-aos="fade-up">Explore Our Services</button>
+        <a href="#services">
+          <button data-aos="fade-up">Explore Our Services</button>
+        </a>
       </div>
     </section>
 
@@ -65,7 +76,7 @@
             src="src\395149368_1357907631760971_5886543071450814731_n.jpg"
             alt="Member 1"
           />
-          <h3>VU DINH DUONG</h3>
+          <h3>Mr. VU DINH DUONG</h3>
           <p>Founder & CEO</p>
           <blockquote>"If I don't walk, how can I run? "</blockquote>
         </div>
@@ -76,7 +87,7 @@
             src="src\441016756_941615844109562_2959127322135339502_n.jpg"
             alt="Member 2"
           />
-          <h3>LE QUOC HIEP</h3>
+          <h3>Mr. LE QUOC HIEP</h3>
           <p>Co-Founder & CTO</p>
           <blockquote>"Once you fight, you never stop. "</blockquote>
         </div>
@@ -87,7 +98,7 @@
             src="src\412571971_1443513832896059_6380815087628032919_n.jpg"
             alt="Member 3"
           />
-          <h3>BUI AN DU</h3>
+          <h3>Mr. BUI AN DU</h3>
           <p>Co-Founder & COO</p>
           <blockquote>
             "Technology is always evolving and I own it. "
@@ -100,7 +111,7 @@
             src="src\332468737_582142267138020_2463351807716358545_n.jpg"
             alt="Member 4"
           />
-          <h3>DAO VAN DOANH</h3>
+          <h3>Mr. DAO VAN DOANH</h3>
           <p>Co-Founder & CFO</p>
           <blockquote>
             "Progress is not important in starting a business. "
@@ -113,56 +124,13 @@
             src="src\z6052814451997_389b85eb118f7c54d02dfc0b60c55de6.jpg"
             alt="Member 5"
           />
-          <h3>NGUYEN HONG QUAN</h3>
+          <h3>Mr. NGUYEN HONG QUAN</h3>
           <p>Co-Founder & Marketing Director</p>
           <blockquote>"equal rice grass. "</blockquote>
         </div>
       </div>
     </section>
-    <!-- Partners Section -->
-    <!-- <section id="partners" class="section" data-aos="fade-up">
-      <h2 data-aos="fade-up">Our Partners</h2>
-      <p data-aos="fade-up">
-        We are proud to collaborate with leading organizations to deliver
-        exceptional solutions.
-      </p> -->
-
-    <!-- Carousel Container
-      <div class="partners-carousel">
-        <div class="partner-logo">
-          <img src="src\images (1).jpg" alt="Partner 1" />
-        </div>
-        <div class="partner-logo">
-          <img src="src\images.jpg" alt="Partner 2" />
-        </div>
-        <div class="partner-logo">
-          <img src="src\logo-fpt-01-1024x774.jpg" alt="Partner 3" />
-        </div>
-        <div class="partner-logo">
-          <img src="src\logo-fpt-01-1024x774.jpg" alt="Partner 4" />
-        </div>
-        <div class="partner-logo">
-          <img src="src\logo-fpt-01-1024x774.jpg" alt="Partner 5" />
-        </div>
-        Lặp lại logo để tạo hiệu ứng liên tục -->
-    <!-- <div class="partner-logo">
-          <img src="src\logo-fpt-01-1024x774.jpg" alt="Partner 1" />
-        </div>
-        <div class="partner-logo">
-          <img src="src\logo-fpt-01-1024x774.jpg" alt="Partner 2" />
-        </div>
-        <div class="partner-logo">
-          <img src="src\logo-fpt-01-1024x774.jpg" alt="Partner 3" />
-        </div>
-        <div class="partner-logo">
-          <img src="src\logo-fpt-01-1024x774.jpg" alt="Partner 4" />
-        </div>
-        <div class="partner-logo">
-          <img src="src\logo-fpt-01-1024x774.jpg" alt="Partner 5" />
-        </div>
-      </div>
-    </section> -->
-
+    
     <!-- Services Section -->
     <section id="services" class="section" data-aos="fade-up">
       <h2 data-aos="fade-up">Our Services</h2>
@@ -173,18 +141,27 @@
 
       <div class="services-container">
         <!-- IoT -->
-        <div class="service-block" data-aos="fade-right" data-aos-delay="100">
-          <video autoplay loop muted class="service-video">
-            <source src="src\14906-259623339.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <h3>IoT Integration</h3>
-          <p>
-            Connect devices and sensors through IoT to collect real-time data,
-            enabling smarter decisions and automation.
-          </p>
-        </div>
-
+        <div
+        class="service-block"
+        data-aos="fade-right"
+        data-aos-delay="100"
+        onclick="openPopup(
+          'Vườn Thông Minh',
+          'Ứng dụng giúp quản lý và giám sát khu vườn thông qua các cảm biến IoT, hỗ trợ tưới tiêu và kiểm tra chất lượng đất tự động.',
+          'src/smart-garden.jpg'
+        )"
+      >
+        <video autoplay loop muted class="service-video">
+          <source src="src/14906-259623339.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <h3>IoT Integration</h3>
+        <p>
+          Connect devices and sensors through IoT to collect real-time data,
+          enabling smarter decisions and automation.
+        </p>
+      </div>
+      
         <!-- Web App -->
         <div class="service-block" data-aos="fade-left" data-aos-delay="200">
           <video autoplay loop muted class="service-video">
@@ -251,7 +228,101 @@
         </div>
       </div>
     </section>
-
+    <section id="news" class="section" data-aos="fade-up">
+      <h2 data-aos="fade-up">Tin Tức</h2>
+      <p data-aos="fade-up">Cập nhật các thông tin mới nhất về công nghệ và nông nghiệp thông minh.</p>
+    
+      <div class="news-container">
+        <!-- Tin tức 1 -->
+        <div class="news-block" data-aos="fade-right" data-aos-delay="100">
+          <img src="src\pexels-divinetechygirl-1181675.jpg" alt="Công Nghệ IoT Trong Nông Nghiệp" class="news-image" />
+          <h3 class="news-title">Công Nghệ IoT Trong Nông Nghiệp</h3>
+          <p class="news-description">
+            Tìm hiểu cách IoT đang giúp tối ưu hóa sản xuất nông nghiệp trên toàn thế giới.
+          </p>
+          <button class="read-more-btn" onclick="openNews('Công Nghệ IoT Trong Nông Nghiệp', 'IoT không chỉ cải thiện năng suất mà còn giúp giám sát môi trường canh tác một cách hiệu quả...', 'src/news1.jpg')">Đọc Thêm</button>
+        </div>
+        
+        <!-- Tin tức 2 -->
+        <div class="news-block" data-aos="fade-left" data-aos-delay="200">
+          <img src="src\z6058597725279_c2267d1b935675e7fa499e3ca60dd142.jpg" alt="Ứng Dụng AI Trong Vườn Thông Minh" class="news-image" />
+          <h3 class="news-title">Ứng Dụng AI Trong Vườn Thông Minh</h3>
+          <p class="news-description">
+            Khám phá vai trò của AI trong việc chăm sóc cây trồng và tự động hóa vườn nhà.
+          </p>
+          <button class="read-more-btn" onclick="openNews('Ứng Dụng AI Trong Vườn Thông Minh', 'AI đang cách mạng hóa việc chăm sóc cây trồng bằng cách tự động phát hiện sâu bệnh và tối ưu hóa phân bón...', 'src/news2.jpg')">Đọc Thêm</button>
+        </div>
+        
+        <!-- Tin tức 3 -->
+        <div class="news-block" data-aos="fade-right" data-aos-delay="300">
+          <img src="src\z6058610618330_6a98dee54ccbbfafca68adc29e6e9637.jpg" alt="Năng Lượng Mặt Trời Trong Nông Nghiệp" class="news-image" />
+          <h3 class="news-title">Năng Lượng Mặt Trời Trong Nông Nghiệp</h3>
+          <p class="news-description">
+            Sử dụng năng lượng mặt trời để phát triển mô hình nông nghiệp bền vững.
+          </p>
+          <button class="read-more-btn" onclick="openNews('Năng Lượng Mặt Trời Trong Nông Nghiệp', 'Hệ thống năng lượng mặt trời đang giúp tiết kiệm chi phí và bảo vệ môi trường trong các trang trại lớn...', 'src/news3.jpg')">Đọc Thêm</button>
+        </div>
+        
+        <!-- Tin tức 4 -->
+        <div class="news-block" data-aos="fade-left" data-aos-delay="400">
+          <img src="src\z6031212702428_9e8a7a856eeee086c12e99c99789f78a.jpg" alt="Blockchain Trong Nông Nghiệp" class="news-image" />
+          <h3 class="news-title">Blockchain Trong Nông Nghiệp</h3>
+          <p class="news-description">
+            Blockchain giúp tăng tính minh bạch và bảo mật trong chuỗi cung ứng nông nghiệp.
+          </p>
+          <button class="read-more-btn" onclick="openNews('Blockchain Trong Nông Nghiệp', 'Tìm hiểu cách công nghệ blockchain đang được áp dụng để truy xuất nguồn gốc sản phẩm nông nghiệp...', 'src/news4.jpg')">Đọc Thêm</button>
+        </div>
+        
+        <!-- Tin tức 5 -->
+        <div class="news-block" data-aos="fade-right" data-aos-delay="500">
+          <img src="src\z6056299376525_7473921cf63d54f80281427fb48e107d.jpg" alt="Robot Tự Động Trong Canh Tác" class="news-image" />
+          <h3 class="news-title">Robot Tự Động Trong Canh Tác</h3>
+          <p class="news-description">
+            Robot đang giúp tự động hóa thu hoạch và chăm sóc cây trồng như thế nào?
+          </p>
+          <button class="read-more-btn" onclick="openNews('Robot Tự Động Trong Canh Tác', 'Robot hiện nay không chỉ thu hoạch chính xác mà còn giúp giảm chi phí lao động đáng kể...', 'src/news5.jpg')">Đọc Thêm</button>
+        </div>
+        
+        <!-- Tin tức 6 -->
+        <div class="news-block" data-aos="fade-left" data-aos-delay="600">
+          <img src="src\z6045270372277_b3925353b2323f1ce4fca9bd699661b2.jpg" alt="Ứng Dụng Drone Trong Nông Nghiệp" class="news-image" />
+          <h3 class="news-title">Ứng Dụng Drone Trong Nông Nghiệp</h3>
+          <p class="news-description">
+            Drone mang lại lợi ích gì trong việc giám sát và quản lý đồng ruộng?
+          </p>
+          <button class="read-more-btn" onclick="openNews('Ứng Dụng Drone Trong Nông Nghiệp', 'Drone đang thay đổi cách nông dân giám sát và phun thuốc bảo vệ thực vật...', 'src/news6.jpg')">Đọc Thêm</button>
+        </div>
+        
+        <!-- Tin tức 7 -->
+        <div class="news-block" data-aos="fade-right" data-aos-delay="700">
+          <img src="src\pexels-goumbik-574071.jpg" alt="Giải Pháp Phân Bón Thông Minh" class="news-image" />
+          <h3 class="news-title">Giải Pháp Phân Bón Thông Minh</h3>
+          <p class="news-description">
+            Phân bón thông minh đang giúp cây trồng phát triển tốt hơn ra sao?
+          </p>
+          <button class="read-more-btn" onclick="openNews('Giải Pháp Phân Bón Thông Minh', 'Phân bón thông minh sử dụng cảm biến để tối ưu hóa lượng phân cần thiết...', 'src/news7.jpg')">Đọc Thêm</button>
+        </div>
+        
+        <!-- Tin tức 8 -->
+        <div class="news-block" data-aos="fade-left" data-aos-delay="800">
+          <img src="src\pexels-divinetechygirl-1181677.jpg" alt="Thủy Canh Trong Nhà" class="news-image" />
+          <h3 class="news-title">Thủy Canh Trong Nhà</h3>
+          <p class="news-description">
+            Công nghệ thủy canh đang trở thành xu hướng cho các hộ gia đình đô thị.
+          </p>
+          <button class="read-more-btn" onclick="openNews('Thủy Canh Trong Nhà', 'Thủy canh giúp tiết kiệm không gian và tối ưu hóa việc trồng rau sạch tại nhà...', 'src/news8.jpg')">Đọc Thêm</button>
+        </div>
+        
+        <!-- Tin tức 9 -->
+        <div class="news-block" data-aos="fade-right" data-aos-delay="900">
+          <img src="src\pexels-divinetechygirl-1181271.jpg" alt="Hệ Thống Nông Nghiệp Tự Động" class="news-image" />
+          <h3 class="news-title">Hệ Thống Nông Nghiệp Tự Động</h3>
+          <p class="news-description">
+            Các hệ thống tự động hóa đang thay đổi bộ mặt ngành nông nghiệp.
+          </p>
+          <button class="read-more-btn" onclick="openNews('Hệ Thống Nông Nghiệp Tự Động', 'Tìm hiểu về các công nghệ tự động hóa đang giúp nông dân nâng cao năng suất...', 'src/pexels-divinetechygirl-1181675.jpg')">Đọc Thêm</button>
+        </div>
+      </section>
     <!-- Contact Section -->
     <section id="contact" class="section" data-aos="fade-up">
       <h2 data-aos="fade-up">Contact Us</h2>
@@ -259,89 +330,118 @@
         Get in touch with us for any inquiries or assistance. We're here to
         help!
       </p>
-
       <!-- Contact Information and Form Container -->
-      <div class="contact-container">
-        <!-- Form liên hệ bên trái -->
-        <div class="contact-form" data-aos="fade-right" data-aos-delay="200">
-          <h3>Contact Form</h3>
-          <p>We'd love to hear from you! Please fill out the form below:</p>
-          <form action="#" method="POST">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="email">Your Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                placeholder="Enter your message"
-                required
-              ></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
-
-        <!-- Thông tin liên hệ bên phải -->
-        <div class="contact-info" data-aos="fade-left" data-aos-delay="100">
-          <h3>SS IT Joint Stock Company</h3>
-          <ul>
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <strong> Address:</strong> 4th Floor, 18 Đường 18M, Mộ Lao, Hà
-              Đông, Hà Nội
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              <strong> Phone:</strong> <a href="tel:0979966441">0979966441</a>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <strong> Email:</strong>
-              <a href="mailto:ssit.company.ssit@gmail.com"
-                >ssit.company.ssit@gmail.com</a
-              >
-            </li>
-          </ul>
-          <!-- Icon mạng xã hội -->
-          <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="https://www.instagram.com" target="_blank"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="https://zalo.me" target="_blank"
-              ><i class="fab fa-zalo"></i
-            ></a>
-          </div>
-        </div>
+  <div class="contact-container">
+  <!-- Form liên hệ bên trái -->
+  <div class="contact-form" data-aos="fade-right" data-aos-delay="200">
+    <h3>Contact Form</h3>
+    <p>We'd love to hear from you! Please fill out the form below:</p>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
       </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Enter your message"
+          required
+        ></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+  <!-- Thông tin liên hệ bên phải -->
+  <div class="contact-info" data-aos="fade-left" data-aos-delay="100">
+    <h3>Contact Information</h3>
+    <div class="company-header">
+      <img src="src\Remove-bg.ai_1732121817365.png" alt="SS IT Logo" class="company-logo" />
+      <h3>SS IT Joint Stock Company</h3>
+    </div>
+    <ul>
+      <li>
+        <i class="fas fa-map-marker-alt"></i>
+        <strong> Address:</strong> 4th Floor, 18 Đường 18M, Mộ Lao, Hà Đông, Hà Nội
+      </li>
+      <li>
+        <i class="fas fa-phone"></i>
+        <strong> Phone:</strong> <a href="tel:0979966441">0979966441</a>
+      </li>
+      <li>
+        <i class="fas fa-envelope"></i>
+        <strong> Email:</strong>
+        <a href="mailto:ssit.company.ssit@gmail.com">ssit.company.ssit@gmail.com</a>
+      </li>
+    </ul>
+    <!-- Icon mạng xã hội -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/ssitvietnam/" target="_blank"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="https://www.instagram.com" target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="https://zalo.me" target="_blank"><i class=""></i></a>
+    </div>
     </section>
+    <div id="service-popup" class="popup hidden">
+      <div class="popup-overlay" onclick="closePopup()"></div>
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <h3 id="popup-title">Popup Title</h3>
+        <img id="popup-image" src="src\z6045270381944_4924d4503e42c97ebe1988c4b90f5e39.jpg" alt="Service Image" class="popup-image" />
+        <p id="popup-description">Popup content goes here.</p>
+      </div>
+    </div>
+    
+
 
     <!-- Thêm phần script cho hiệu ứng AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init(); // Khởi tạo thư viện AOS cho hiệu ứng cuộn
     </script>
+    <script>
+      // Hàm mở popup
+      function openPopup(title, description) {
+        document.getElementById("popup-title").textContent = title;
+        document.getElementById("popup-description").textContent = description;
+        document.getElementById("service-popup").classList.remove("hidden");
+      }
+    
+      // Hàm đóng popup
+      function closePopup() {
+        document.getElementById("service-popup").classList.add("hidden");
+      }
+    </script>
+    <script>
+      function openNews(title, description, imageUrl) {
+        document.getElementById("popup-title").textContent = title;
+        document.getElementById("popup-description").textContent = description;
+        document.getElementById("popup-image").src = imageUrl;
+        document.getElementById("service-popup").classList.remove("hidden");
+      }
+    </script>
+    
+    
   </body>
 </html>
